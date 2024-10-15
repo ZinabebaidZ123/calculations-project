@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+  
+    <title>المدونة</title>
+   <!-- favicon --------------- -->
+   <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- fontawesome-link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- css file link  -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+   
+  </head>
+<body>
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container  d-flex justify-content-between align-items-center  ">
+      
+      <div class="search-btn">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        
+      </div>
+      <h1 class="logo ">
+        <a class="navbar-brand" href="index.html"><img src="assets/images/logo.svg" alt=""></a>
+        </h1>
+    
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars navbar-toggler-icon "></i>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-content-between " id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto ">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#our-services">الخدمات</a>
+          </li>
+       
+          <li class="nav-item">
+            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">المدونة</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#footer" tabindex="-1" aria-disabled="true">اتصل بنا</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">  سياسة الخصوصية</a>
+          </li>
+        </ul>
+        <form class="d-flex  p-0 ">
+          <input class="form-control " type="search" placeholder="حساب العمر  ، النسبة المئوية ...." aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass  search-icon"></i>
+          <button class="" type="submit">بحث</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+      <!-- start filter-blog section  -->
+   <section class="filter-blog">
+    <div class="container">
+      <div class="heading ">
+        <h2>المدونه</h2>
+     
+      </div>
+ 
+      <div class="">
+        <div class="swiper mySwiper   nav nav-tabs mob-tabs  ">
+          <div class="swiper-wrapper ">
+              <div class="swiper-slide">
+                  <button data-bs-target="#tab-for-all" type="button" class="nav-link active" data-bs-toggle="tab">الكل</button>
+              </div>
+              <div class="swiper-slide">
+                
+                  <button data-bs-target="#tab-for-dates" type="button" class="nav-link" data-bs-toggle="tab">التواريخ</button>
+              
+                
+              </div>
+              <div class="swiper-slide">
+                  <button data-bs-target="#tab-for-ages" type="button" class="nav-link" data-bs-toggle="tab">الأعمار</button>
+              </div>
+              <div class="swiper-slide">
+                  <button data-bs-target="#tab-for-percentage" type="button" class="nav-link" data-bs-toggle="tab">النسبة المئوية</button>
+              </div>
+              <div class="swiper-slide">
+                  <button data-bs-target="#tab-for-balance" type="button" class="nav-link" data-bs-toggle="tab">الرصيد</button>
+              </div>
+              <div class="swiper-slide">
+                  <button data-bs-target="#tab-for-units-of-measurments" type="button" class="nav-link" data-bs-toggle="tab">وحدات القياس</button>
+              </div>
+              <div class="swiper-slide">
+                  <button data-bs-target="#tab-for-numbers" type="button" class="nav-link" data-bs-toggle="tab">الأرقام</button>
+              </div>
+  
+              
+          
+          </div>
+       
+      </div>
+      </div>
+   
+
+
+      <div class="tab-content  ">
+        <div class="tab-pane active show fade  " id="tab-for-all">
+          <div class="our-blogs ">
+            <div class="  ">
+
+              <div class="row justify-content-between ">
+                <!-- card1  -->
+                <div class="col-md-6  col-lg-4">
+                  <a href="blog-details.html">
+                    <div class="blog-card ">
+                      <div class="img">
+                        <img src="assets/images/blog-img.jfif" alt="" class="img-fluid">
+                      </div>
+                      <div class="blog-name">
+                        <h4>
+                          البورصة والأموال
+                        </h4>
+                      </div>
+                      <div class="blog-date">
+                          <h5> 16 ابريل 2024  <span><img src="assets/images/bollet.svg" alt=""></span> 15:30 ص</h5>
+                      </div>
+                      
+                      <div class="blog-content">
+                          <h3>  ما هو مفهوم البورصة؟</h3>
+                          <p> البورصة هي إحدى أهم المؤسسات المالية في العالم، حيث تُعتبر ساحة لتبادل الأوراق ... </p>
+                      </div>
+            
+                      <div class="action d-flex justify-content-end">
+                        <a href="">     اقرأ المزيد <i class="fa-solid fa-arrow-left"></i>  </a>
+                      </div>
+                    </div>
+                  </a>
+              
+                </div>
+                <!-- card2  -->
+                <div class="col-md-6  col-lg-4">
+                  <a href="blog-details.html">
+                    <div class="blog-card ">
+                      <div class="img">
+                        <img src="assets/images/blog-img.jfif" alt="" class="img-fluid">
+                      </div>
+                      <div class="blog-name">
+                        <h4>
+                          البورصة والأموال
+                        </h4>
+                      </div>
+                      <div class="blog-date">
+                          <h5> 16 ابريل 2024  <span><img src="assets/images/bollet.svg" alt=""></span> 15:30 ص</h5>
+                      </div>
+                      
+                      <div class="blog-content">
+                          <h3>  ما هو مفهوم البورصة؟</h3>
+                          <p> البورصة هي إحدى أهم المؤسسات المالية في العالم، حيث تُعتبر ساحة لتبادل الأوراق ... </p>
+                      </div>
+            
+                      <div class="action d-flex justify-content-end">
+                        <a href="">     اقرأ المزيد <i class="fa-solid fa-arrow-left"></i>  </a>
+                      </div>
+                    </div>
+                  </a>
+              
+                </div>
+                      <!-- card3  -->
+                      <div class="col-md-6  col-lg-4">
+                        <a href="blog-details.html">
+                          <div class="blog-card ">
+                            <div class="img">
+                              <img src="assets/images/blog-img.jfif" alt="" class="img-fluid">
+                            </div>
+                            <div class="blog-name">
+                              <h4>
+                                البورصة والأموال
+                              </h4>
+                            </div>
+                            <div class="blog-date">
+                                <h5> 16 ابريل 2024  <span><img src="assets/images/bollet.svg" alt=""></span> 15:30 ص</h5>
+                            </div>
+                            
+                            <div class="blog-content">
+                                <h3>  ما هو مفهوم البورصة؟</h3>
+                                <p> البورصة هي إحدى أهم المؤسسات المالية في العالم، حيث تُعتبر ساحة لتبادل الأوراق ... </p>
+                            </div>
+                  
+                            <div class="action d-flex justify-content-end">
+                              <a href="">     اقرأ المزيد <i class="fa-solid fa-arrow-left"></i>  </a>
+                            </div>
+                          </div>
+                        </a>
+                    
+                      </div>
+
+                                      <!-- card1  -->
+                                      <div class="col-md-6  col-lg-4">
+                                        <a href="blog-details.html">
+                                          <div class="blog-card ">
+                                            <div class="img">
+                                              <img src="assets/images/blog-img.jfif" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="blog-name">
+                                              <h4>
+                                                البورصة والأموال
+                                              </h4>
+                                            </div>
+                                            <div class="blog-date">
+                                                <h5> 16 ابريل 2024  <span><img src="assets/images/bollet.svg" alt=""></span> 15:30 ص</h5>
+                                            </div>
+                                            
+                                            <div class="blog-content">
+                                                <h3>  ما هو مفهوم البورصة؟</h3>
+                                                <p> البورصة هي إحدى أهم المؤسسات المالية في العالم، حيث تُعتبر ساحة لتبادل الأوراق ... </p>
+                                            </div>
+                                  
+                                            <div class="action d-flex justify-content-end">
+                                              <a href="">     اقرأ المزيد <i class="fa-solid fa-arrow-left"></i>  </a>
+                                            </div>
+                                          </div>
+                                        </a>
+                                    
+                                      </div>
+                  <!-- card2  -->
+                  <div class="col-md-6  col-lg-4">
+                    <a href="blog-details.html">
+                      <div class="blog-card ">
+                        <div class="img">
+                          <img src="assets/images/blog-img.jfif" alt="" class="img-fluid">
+                        </div>
+                        <div class="blog-name">
+                          <h4>
+                            البورصة والأموال
+                          </h4>
+                        </div>
+                        <div class="blog-date">
+                            <h5> 16 ابريل 2024  <span><img src="assets/images/bollet.svg" alt=""></span> 15:30 ص</h5>
+                        </div>
+                        
+                        <div class="blog-content">
+                            <h3>  ما هو مفهوم البورصة؟</h3>
+                            <p> البورصة هي إحدى أهم المؤسسات المالية في العالم، حيث تُعتبر ساحة لتبادل الأوراق ... </p>
+                        </div>
+              
+                        <div class="action d-flex justify-content-end">
+                          <a href="">     اقرأ المزيد <i class="fa-solid fa-arrow-left"></i>  </a>
+                        </div>
+                      </div>
+                    </a>
+                
+                  </div>
+                        <!-- card3  -->
+                        <div class="col-md-6  col-lg-4">
+                          <a href="blog-details.html">
+                            <div class="blog-card ">
+                              <div class="img">
+                                <img src="assets/images/blog-img.jfif" alt="" class="img-fluid">
+                              </div>
+                              <div class="blog-name">
+                                <h4>
+                                  البورصة والأموال
+                                </h4>
+                              </div>
+                              <div class="blog-date">
+                                  <h5> 16 ابريل 2024  <span><img src="assets/images/bollet.svg" alt=""></span> 15:30 ص</h5>
+                              </div>
+                              
+                              <div class="blog-content">
+                                  <h3>  ما هو مفهوم البورصة؟</h3>
+                                  <p> البورصة هي إحدى أهم المؤسسات المالية في العالم، حيث تُعتبر ساحة لتبادل الأوراق ... </p>
+                              </div>
+                    
+                              <div class="action d-flex justify-content-end">
+                                <a href="">     اقرأ المزيد <i class="fa-solid fa-arrow-left"></i>  </a>
+                              </div>
+                            </div>
+                          </a>
+                      
+                        </div>
+
+          
+      </div>
+    </div>
+   </section>
+
+   <footer id="footer">
+    <div class="container">
+      <div class="footer-content d-flex justify-content-between ">
+        <div class="links">
+          <ul>
+            <li>
+              <i class="fa-solid fa-caret-left"></i>
+              <a href="">  الرئيسية   </a>
+            </li>
+            <li>
+              <i class="fa-solid fa-caret-left"></i>
+              <a href="">  الخدمات   </a>
+            </li>
+            <li>
+              <i class="fa-solid fa-caret-left"></i>
+              <a href="">  المدونة   </a>
+            </li>
+            <li>
+              <i class="fa-solid fa-caret-left"></i>
+              <a href="">  سياسة الخصوصية   </a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="logo ">
+          <img src="assets/images/logo.svg" alt="احسبلي">
+          
+        </div>
+  
+        <div class="social-media">
+          <h3>
+            <i class="fa-solid fa-paper-plane"></i>  اتصل بنا
+          </h3>
+  
+          <div class="icons d-flex">
+            <div class="icon">
+              <a href="">   <i class="fa-brands fa-linkedin-in"></i> </a>
+            </div>
+            <div class="icon">
+              <a href="">   <i class="fa-brands fa-x-twitter"></i> </a>
+            </div>
+            <div class="icon">
+              <a href="">   <i class="fa-brands fa-instagram"></i> </a>
+            </div>
+            <div class="icon">
+              <a href="">   <i class="fa-brands fa-facebook-f"></i> </a>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة © أحسبلي 2024</p>
+      </div>
+      
+    </div>
+   </footer>
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+<!-- script-file  -->
+ <script src="/assets/js/script.js"></script>
+   <!-- bootstrap link  -->
+     <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+     crossorigin="anonymous"
+   ></script>
+
+
+
+       </body>
+       </html>
