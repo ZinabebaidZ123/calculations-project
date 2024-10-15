@@ -33,62 +33,73 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
 
-// services and blogs slider js code 
-document.querySelectorAll(".slider-container").forEach((sliderContainer) => {
-  let currentSlideIndex = 0;
-  const slides = sliderContainer.querySelectorAll(".slider-item");
-  const bulletContainer = sliderContainer.querySelector(".bullet-container");
-  const prevButton = sliderContainer.querySelector(".slider-control.prev");
-  const nextButton = sliderContainer.querySelector(".slider-control.next");
-
-  // Only proceed if bulletContainer exists
-  if (bulletContainer) {
-      // Function to create bullets dynamically for each slider
-      function createBullets() {
-          slides.forEach((_, index) => {
-              const bullet = document.createElement("span");
-              bullet.classList.add("bullet");
-              if (index === 0) bullet.classList.add("active");
-              bullet.addEventListener("click", () => currentSlide(index));
-              bulletContainer.appendChild(bullet);
-          });
-      }
-
-      createBullets(); // Call this function to create bullets for each slider
-  } else {
-      console.warn("bulletContainer not found. Check the HTML structure.");
-  }
-
-  const bullets = bulletContainer ? bulletContainer.querySelectorAll(".bullet") : [];
-
-  // Function to show slide based on index for the specific slider
-  function showSlide(index) {
-      slides.forEach(slide => slide.classList.remove("active"));
-      bullets.forEach(bullet => bullet.classList.remove("active"));
-
-      slides[index].classList.add("active");
-      if (bullets[index]) bullets[index].classList.add("active");
-  }
-
-  // Function for next slide with loop functionality
-  nextButton?.addEventListener("click", () => {
-      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-      showSlide(currentSlideIndex);
+  document.querySelectorAll(".slider-container").forEach((sliderContainer) => {
+    let currentSlideIndex = 0;
+    const slides = sliderContainer.querySelectorAll(".slider-item");
+    const bulletContainer = sliderContainer.querySelector(".bullet-container");
+    const prevButton = sliderContainer.querySelector(".slider-control.prev");
+    const nextButton = sliderContainer.querySelector(".slider-control.next");
+  
+    // Only proceed if bulletContainer exists
+    if (bulletContainer) {
+        // Function to create bullets dynamically for each slider
+        function createBullets() {
+            slides.forEach((_, index) => {
+                const bullet = document.createElement("span");
+                bullet.classList.add("bullet");
+                if (index === 0) bullet.classList.add("active");
+                bullet.addEventListener("click", () => currentSlide(index));
+                bulletContainer.appendChild(bullet);
+            });
+        }
+  
+        createBullets(); // Call this function to create bullets for each slider
+    } else {
+        console.warn("bulletContainer not found. Check the HTML structure.");
+    }
+  
+    const bullets = bulletContainer ? bulletContainer.querySelectorAll(".bullet") : [];
+  
+    // Function to show slide based on index for the specific slider
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        bullets.forEach(bullet => bullet.classList.remove("active"));
+  
+        slides[index].classList.add("active");
+        if (bullets[index]) bullets[index].classList.add("active");
+    }
+  
+    // Function for next slide with loop functionality
+    nextButton?.addEventListener("click", () => {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        showSlide(currentSlideIndex);
+  
+        // Add active class to the next button and remove from the prev button
+        nextButton.classList.add("active");
+        prevButton.classList.remove("active");
+    });
+  
+    // Function for previous slide with loop functionality
+    prevButton?.addEventListener("click", () => {
+        currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+        showSlide(currentSlideIndex);
+  
+        // Add active class to the prev button and remove from the next button
+        prevButton.classList.add("active");
+        nextButton.classList.remove("active");
+    });
+  
+    // Function to set current slide based on bullet click for the specific slider
+    function currentSlide(index) {
+        currentSlideIndex = index;
+        showSlide(currentSlideIndex);
+  
+        // Remove active class from both prev and next buttons when a bullet is clicked
+        prevButton.classList.remove("active");
+        nextButton.classList.remove("active");
+    }
   });
-
-  // Function for previous slide with loop functionality
-  prevButton?.addEventListener("click", () => {
-      currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-      showSlide(currentSlideIndex);
-  });
-
-  // Function to set current slide based on bullet click for the specific slider
-  function currentSlide(index) {
-      currentSlideIndex = index;
-      showSlide(currentSlideIndex);
-  }
-});
-
+  
 // to add active class to the clicked tab 
   // Get all buttons with class 'nav-link'
   const buttons = document.querySelectorAll('.nav-link');
