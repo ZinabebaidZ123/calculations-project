@@ -348,6 +348,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+ 
   }
 
   .our-services .icon {
