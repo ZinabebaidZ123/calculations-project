@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
 
-  document.querySelectorAll(".slider-container").forEach((sliderContainer) => {
+  document.querySelectorAll(".slider-container ").forEach((sliderContainer) => {
     let currentSlideIndex = 0;
     const slides = sliderContainer.querySelectorAll(".slider-item");
     const bulletContainer = sliderContainer.querySelector(".bullet-container");
@@ -129,3 +129,47 @@ document.addEventListener('DOMContentLoaded', () => {
       disableOnInteraction: false,
     },
   });
+// swiper for our-services in mobile screen 
+  var swiper = new Swiper(".my-Swiper", {
+    loop: true, 
+    centeredSlides: false,
+    spaceBetween: 30,
+    slidesPerView: "auto", 
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },  on: {
+      init: function () {
+        // Make the prev button active by default
+        document.querySelector('.swiper-button-prev').classList.add('active');
+      },
+      slideChange: function () {
+        // Logic for disabling based on beginning and end states (if needed)
+        if (this.isBeginning) {
+          document.querySelector('.swiper-button-prev').classList.add('inactive');
+        } else {
+          document.querySelector('.swiper-button-prev').classList.remove('inactive');
+        }
+  
+        if (this.isEnd) {
+          document.querySelector('.swiper-button-next').classList.add('inactive');
+        } else {
+          document.querySelector('.swiper-button-next').classList.remove('inactive');
+        }
+      }
+    }
+  });
+// Add event listeners to toggle the active class between buttons
+document.querySelector('.swiper-button-prev').addEventListener('click', function () {
+  document.querySelector('.swiper-button-prev').classList.add('active');
+  document.querySelector('.swiper-button-next').classList.remove('active');
+});
+
+document.querySelector('.swiper-button-next').addEventListener('click', function () {
+  document.querySelector('.swiper-button-next').classList.add('active');
+  document.querySelector('.swiper-button-prev').classList.remove('active');
+});

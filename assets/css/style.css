@@ -22,7 +22,9 @@
  --white-smoke-color:#FDFDFD;
 }    
 /* Import Tajawal font with regular (400), semi-bold (600), and bold (700) weights */
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap');
+
+
+
 
 *{
     margin: 0;
@@ -33,8 +35,8 @@
 }
 body {
     background-color: var(--body-color);
-    font-family: "Alexandria", sans-serif;
     scroll-behavior: smooth;
+    font-family: "Tajawal", sans-serif;
 }
 ul {
     list-style: none;
@@ -113,8 +115,6 @@ a {
     padding-top: 17px !important;
     padding-bottom: 17px !important;
     margin-right: 8px;
- 
-    
 
   }
   .navbar form button {
@@ -133,12 +133,14 @@ a {
     max-width: 63px;
     border-radius: 6px;
   }
-  .navbar .form-control{
+  .navbar input{
     min-width:322px !important;
     border-radius: 16px !important;
     min-height: 46px !important;
     padding: .375rem 1rem !important;
     direction: rtl !important;
+    border: none ;
+    outline: none;
   }
   .navbar .search-btn {
     display: none;
@@ -346,6 +348,8 @@ a {
     border-radius: 16px;
     height: 100%;
     display: flex;
+    min-height: 256px !important;
+    max-width: 282px !important;
     flex-direction: column;
     justify-content: space-between;
  
@@ -378,10 +382,9 @@ a {
     font-weight:700 ;
     color:var(--action-btn-color) ;
   }
-  .our-services .action i {
-    font-size: 18px;
+  .our-services .action img {
     margin-right: 8px;
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
   }
   .mobile-services{
     display:none;
@@ -541,9 +544,9 @@ a {
   line-height:32px ;
   color: var(--action-btn-color) ;
 }
-.blogs-slider .action i {
+.blogs-slider .action img {
   margin-right: 8px;
-  line-height: 0;
+ 
 }
 .blogs-slider .slider-controls , .our-services .slider-controls {
   display: flex;
@@ -582,16 +585,18 @@ a {
   justify-content: center;
 }
 .blogs-slider .bullet , .our-services  .bullet{
-  width: 15px;
-  height: 15px;
+  width: 15px !important;
+  height: 15px !important;
   border-radius: 50%;
-  margin: 0 4px;
-  border: 0.5px solid var(--action-btn-color);
+  margin: 0 4px !important;
+  border: 0.5px solid var(--action-btn-color) !important;
   cursor: pointer;
 }
 .blogs-slider .bullet.active , .our-services .bullet.active{
-  background-color: var(--action-btn-color);
+  background-color: var(--action-btn-color) !important;
 }
+
+
 @media(max-width:992px){
   .blogs-slider {
     margin-left: 24px;
@@ -865,11 +870,12 @@ a {
   border:2px solid var(--yellow-color) !important;
 
 }
+/* swiper customization for filter-blog , filter-service and our-services-section  */
 .swiper {
   width: 100%;
   height: 100%;
 }
-.swiper-slide {
+ .filter-service .swiper-slide , .filter-blog .swiper-slide{
   text-align: center !important;
   max-width:168px !important;
   font-size: 18px;
@@ -877,10 +883,52 @@ a {
   min-height: 42px !important;
   padding-left: 16px !important;
 }
+/* customization foe swiper js  */
 .swiper-wrapper {
   display: flex;
   width: 100%;
 }
+.our-services .swiper-slide {
+  max-width: 239px !important;
+  min-height: 256px !important;
+  margin-bottom: 20px;
+}
+.our-services .swiper-button-next, .our-services  .swiper-button-prev , .our-services .swiper-pagination{
+  position: unset !important;
+  margin-top: 0 !important;
+}
+.our-services .swiper-button-next, .our-services  .swiper-button-prev{
+  width: 32px !important;
+  height: 32px !important;
+  flex-shrink: 0 !important;
+}
+.our-services .swiper-button-next.active , .our-services  .swiper-button-prev.active{
+  background-color: var(--action-btn-color) !important;
+  color:var(--text-in-btn-color) !important;
+}
+.swiper-button-prev:after,  .swiper-button-next:after {
+  content: ''  !important;
+
+}
+.our-services .swiper-pagination-bullet {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50%;
+  margin: 0 4px !important;
+  border: 0.5px solid var(--action-btn-color) !important;
+  background-color: transparent !important;
+}
+.our-services .swiper-pagination-bullet-active{
+  background-color: var(--action-btn-color) !important;
+}
+.our-services .swiper-controls {
+  margin-top: 4px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  pointer-events: auto !important;
+}
+
 @media(max-width:767px){
   .swiper-slide {
     max-width:131px;
@@ -1011,10 +1059,10 @@ a {
   line-height:32px ;
   font-weight: 700;
   color:var(--action-btn-color);
-
+  
   
 }
-.filter-blog .action a i {
+.filter-blog .action a img {
   margin-right: 8px;
 
 }
