@@ -35,20 +35,22 @@
 <body>
 <!-- start navbar ------------------------------ -->
 <nav class="navbar navbar-expand-lg ">
-  <div class="container  d-flex justify-content-between align-items-center  ">
+  <div class="container d-flex justify-content-between align-items-center ">
     
-    <div class="search-btn">
+    <!-- Search button -->
+    <!-- <div class="search-btn">
       <button><i class="fa-solid fa-magnifying-glass"></i></button>
-      
-    </div>
-    <h1 class="logo ">
-      <a class="navbar-brand" href="#"><img src="assets/images/logo.svg" alt=""></a>
-      </h1>
-  
-    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fa-solid fa-bars navbar-toggler-icon "></i>
-    </button>
+    </div> -->
 
+    <!-- Logo -->
+    <h1 class="logo menu-logo">
+      <a class="navbar-brand mx-0" href="#"><img src="assets/images/logo.svg" alt=""></a>
+    </h1>
+
+    <!-- Toggler button to open the menu on small screens -->
+    <button class="navbar-toggler " type="button">
+      <i class="fa-solid fa-bars navbar-toggler-icon"></i>
+    </button>
     <div class="collapse navbar-collapse justify-content-between " id="navbarSupportedContent">
       <ul class="navbar-nav m-auto ">
         <li class="nav-item">
@@ -71,11 +73,68 @@
           <a class="nav-link " href="error404.html" tabindex="-1" aria-disabled="true">خطأ</a>
         </li>
       </ul>
-      <form class="d-flex  p-0 ">
-        <input class=" " type="search" placeholder="حساب العمر  ، النسبة المئوية ...." aria-label="Search">
-        <i class="fa-solid fa-magnifying-glass  search-icon"></i>
-        <button class="" type="submit">بحث</button>
-      </form>
+      <form class="search-form d-flex align-items-center p-0">
+        <input id="search-input" class="search-input" type="text" placeholder="حساب العمر، النسبة المئوية...." aria-label="Search">
+        <i id="search-icon" class="fa-solid fa-magnifying-glass search-icon"></i>
+        <button class="hover-with-opacity-btn" type="submit">بحث</button>
+    </form>
+    </div>
+    <!-- Fullscreen menu (hidden by default) -->
+    <div class="fullscreen-menu d-none ">
+      <div class="menu-header d-flex justify-content-center align-items-center ">
+        <!-- Close button on the left side -->
+        <button class="close-menu"><i class="fa-solid fa-xmark"></i></button>
+        <!-- Logo in the center -->
+        <a href="#" class="logo"><img src="assets/images/logo.svg" alt=""></a>
+    
+      </div>
+      <ul class="mobile-nav  d-flex flex-column   ">
+        <div class="search">
+          <form class="search-form d-flex align-items-center justify-content-center">
+            <input id="search-input" class="search-input" type="text" placeholder="حساب العمر، النسبة المئوية...." aria-label="Search">
+            <i id="search-icon" class="fa-solid fa-magnifying-glass search-icon"></i>
+            <button class="search-btn" type="submit">بحث</button>
+        </form>
+        </div>
+     
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">الخدمات</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html">المدونة</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">اتصل بنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">سياسة الخصوصية</a>
+        </li>
+      </ul>
+
+      
+      <div class="social-media ">
+      
+
+        <div class="icons d-flex  justify-content-center">
+          <div class="icon">
+            <a href="#" class="">   <i class="fa-brands fa-linkedin-in"></i> </a>
+          </div>
+          <div class="icon sec-hovered-style">
+            <a href="#">   <i class="fa-brands fa-x-twitter"></i> </a>
+          </div>
+          <div class="icon">
+            <a href="#">   <i class="fa-brands fa-instagram"></i> </a>
+          </div>
+          <div class="icon">
+            <a href="#">   <i class="fa-brands fa-facebook-f"></i> </a>
+          </div>
+      
+        </div>
+      </div>
+    
     </div>
   </div>
 </nav>
@@ -126,7 +185,7 @@
       <div class="tab-content">
         <div class="tab-pane active show fade" id="tab-for-all">
           <div class="our-services">
-            <div class="container">
+            <div class="">
 
               <div class="row justify-content-between ">
                 <div class="col-lg-3 col-md-6 ">
@@ -141,7 +200,7 @@
                     </div>
           
                     <div class="action d-flex justify-content-end">
-                      <a href="">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
+                      <a href="" class="hover-with-opacity-btn">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
                     </div>
                   </div>
                 </div>
@@ -158,7 +217,7 @@
                     </div>
           
                     <div class="action d-flex justify-content-end">
-                      <a href="">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">   </a>
+                      <a href="" class="hover-with-opacity-btn">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">   </a>
                     </div>
                   </div>
                 </div>
@@ -175,7 +234,7 @@
                     </div>
           
                     <div class="action d-flex justify-content-end">
-                      <a href="">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
+                      <a href="" class="hover-with-opacity-btn">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
                     </div>
                   </div>
                 </div>
@@ -191,7 +250,7 @@
                     </div>
           
                     <div class="action d-flex justify-content-end">
-                      <a href="">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">   </a>
+                      <a href="" class="hover-with-opacity-btn">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">   </a>
                     </div>
                   </div>
                 </div>
@@ -207,7 +266,7 @@
                     </div>
           
                     <div class="action d-flex justify-content-end">
-                      <a href="">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
+                      <a href="" class="hover-with-opacity-btn">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
                     </div>
                   </div>
                 </div>
@@ -223,7 +282,7 @@
                     </div>
           
                     <div class="action d-flex justify-content-end">
-                      <a href="">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">   </a>
+                      <a href="" class="hover-with-opacity-btn">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">   </a>
                     </div>
                   </div>
                 </div>
@@ -239,7 +298,7 @@
                     </div>
           
                     <div class="action d-flex justify-content-end">
-                      <a href="">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">   </a>
+                      <a href="" class="hover-with-opacity-btn">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">   </a>
                     </div>
                   </div>
                 </div>
@@ -255,7 +314,7 @@
                     </div>
           
                     <div class="action d-flex justify-content-end">
-                      <a href="">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
+                      <a href="" class="hover-with-opacity-btn">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
                     </div>
                   </div>
                 </div>
@@ -272,7 +331,7 @@
                     </div>
           
                     <div class="action d-flex justify-content-end">
-                      <a href="">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
+                      <a href="" class="hover-with-opacity-btn">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
                     </div>
                   </div>
                 </div>
@@ -288,7 +347,7 @@
                     </div>
           
                     <div class="action d-flex justify-content-end">
-                      <a href="">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
+                      <a href="" class="hover-with-opacity-btn">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
                     </div>
                   </div>
                 </div>
@@ -304,7 +363,7 @@
                     </div>
           
                     <div class="action d-flex justify-content-end">
-                      <a href="">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
+                      <a href="" class="hover-with-opacity-btn">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
                     </div>
                   </div>
                 </div>
@@ -323,7 +382,7 @@
                     </div>
           
                     <div class="action d-flex justify-content-end">
-                      <a href="">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
+                      <a href="" class="hover-with-opacity-btn">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
                     </div>
                   </div>
                 </div>
@@ -340,7 +399,7 @@
                     </div>
           
                     <div class="action d-flex justify-content-end">
-                      <a href="">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
+                      <a href="" class="hover-with-opacity-btn">    جرب الأن <img src="assets/images/arrow-icon.svg" alt="">  </a>
                     </div>
                   </div>
                 </div>
@@ -350,6 +409,24 @@
 
         </div>
 
+      </div>
+
+      <div class="pagination-container d-flex justify-content-center">
+        <nav aria-label="...">
+          <ul class="pagination">
+            <li class="page-item prev-btn">
+              <span class="page-link"><i class="fa-solid fa-angle-right "></i></span>
+            </li>
+            <li class="page-item "><a class="page-link active" href="#">1</a></li>
+            <li class="page-item "><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">..</a></li>
+            <li class="page-item"><a class="page-link" href="#">9</a></li>
+            <li class="page-item "><a class="page-link" href="#">10</a></li>
+            <li class="page-item  next-btn">
+              <a class="page-link disabled" href="#"><i class="fa-solid fa-angle-left "></i></a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
    </section>
